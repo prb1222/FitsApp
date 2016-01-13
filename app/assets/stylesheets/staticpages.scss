@@ -1,11 +1,13 @@
-// Place all the styles related to the StaticPages controller here.
+// Place all the styles related to the Staticpages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .header-container {
   text-align: center;
   font-family: 'Verdana';
+  padding-top: 30px;
   h1 {
     color: #4169E1;
+    padding-bottom: 10px;
   }
 }
