@@ -30,7 +30,7 @@ gem 'font-awesome-rails'
 gem 'backbone-on-rails'
 # bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.5'
-
+gem "non-stupid-digest-assets"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
