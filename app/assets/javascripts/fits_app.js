@@ -4,10 +4,7 @@ window.FitsApp = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    var router = new FitsApp.Routers.Router({$rootEl: $('div#content')});
+    Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  FitsApp.initialize();
-});

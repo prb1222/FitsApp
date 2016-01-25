@@ -17,6 +17,7 @@
 //= require underscore
 //= require backbone
 //= require fits_app
+//= require_tree ./util
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

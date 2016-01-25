@@ -2,21 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $font-stack: "Lato", "Lucida Grande", "Lucida", "Verdana", "Arial", sans-serif;
-$primary-blue: #4169E1;
+$primary-blue: #1e4387;
+$primary-grey: #777777;
+$light-grey: #cccccc;
+$light-white: #eeeeee;
 
 .navbar-brand {
   height: 130px;
 }
 
-.header-container {
-  text-align: center;
-  font-family: $font-stack;
-  padding-top: 30px;
-  height: 1500px;
-  h1 {
-    color: $primary-blue;
-    padding-bottom: 10px;
-  }
+a {
+  text-decoration: none;
+  color: $primary-blue;
 }
 
 nav {
@@ -30,5 +27,133 @@ nav {
 
   .navbar-text {
     margin-top: 40px;
+  }
+}
+
+body {
+  padding-top: 130px;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-link {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.strike-through {
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  width: 60%;
+  background-color: $light-grey;
+}
+
+.jumbo-container {
+  position: relative;
+  display: block;
+}
+
+.splash-image {
+  background-image: url('teamwork_high_res.jpg');
+  opacity: 0.8;
+  height: 500px;
+  background-size: cover;
+  background-color: $light-grey;
+}
+
+.intro-container {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+  font: $font-stack;
+  color: $light-grey;
+
+  p {
+    text-shadow: 1px 1px $primary-grey;
+  }
+
+  .get-started {
+    font-size: 45px;
+    border-radius: 30px;
+    background-color: $primary-blue;
+    border-color: $primary-blue;
+  }
+}
+
+.how-it-works {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  font: $font-stack;
+  color: $primary-grey;
+  background-color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  div {
+    transform: translateX(40px);
+  }
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  h5 {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  p {
+    color: $light-grey;
+    font-size: 20px;
+  }
+}
+
+.why-fits {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: $light-white;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+
+  .row {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    text-align: left;
+    font-size: 25px;
   }
 }
