@@ -10,8 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require main
  */
 
 /* CSS RESET CODE FOR CROSS_BROWSER SUPPORT */
@@ -19,6 +19,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -63,3 +64,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+@import "bootstrap-sprockets";
+@import "bootstrap";

@@ -1,0 +1,34 @@
+// Place all the styles related to the Staticpages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$font-stack: "Lato", "Lucida Grande", "Lucida", "Verdana", "Arial", sans-serif;
+$primary-blue: #4169E1;
+
+.navbar-brand {
+  height: 130px;
+}
+
+.header-container {
+  text-align: center;
+  font-family: $font-stack;
+  padding-top: 30px;
+  height: 1500px;
+  h1 {
+    color: $primary-blue;
+    padding-bottom: 10px;
+  }
+}
+
+nav {
+  font-size: 30px;
+  .navbar-link {
+    padding: 0px;
+    height: 42px;
+    margin: 15px;
+    margin-top: 40px;
+  }
+
+  .navbar-text {
+    margin-top: 40px;
+  }
+}
