@@ -1,1 +1,12 @@
-Greetings!
+<h3>
+  Message sent on: <%= Time.now.ctime %>
+</h3>
+<h3>
+  From: <%= @attrs['name'] %><br>
+</h3>
+ContactAddress: <%= @attrs['contactAddress'] %><br>
+<h3>
+</h3>
+<p>
+  Message Text: <%= @attrs['message'] %>
+</p>

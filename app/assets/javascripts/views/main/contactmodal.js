@@ -54,6 +54,8 @@ FitsApp.Views.ContactModal = Backbone.View.extend({
       return;
     }
 
-    
+    $.post("/supportmailer", {message_attrs: {message: message, contactAddress: contactAddress, name: name}});
+    $(document).off('keydown');
+    this.remove();
   }
 });

@@ -1,6 +1,7 @@
 class SupportMailer < ApplicationMailer
-  default from: 'notifications@example.com'
-  def support_email
-    mail(to: "peter.r.benavides@gmail.com",subject: "test")
+  default from: 'support@forwarditsolution.com'
+  def support_email(attributes)
+    @attrs = attributes
+    mail(to: "support@forwarditsolution.com", subject: "Website Email")
   end
 end
