@@ -1,10 +1,13 @@
 FitsApp.Views.ContactModal = Backbone.View.extend({
   template: JST['main/contactmodal'],
 
+  successTemplate: JST['main/contactmodalsuccess'],
+
   events: {
     "click .close": "remove",
     "click .m-background": "remove",
-    "click .submit-button":"handleSubmit"
+    "click .submit-button":"handleSubmit",
+    "click .close-button":"remove"
   },
 
   className: 'modalview-container',
@@ -54,8 +57,19 @@ FitsApp.Views.ContactModal = Backbone.View.extend({
       return;
     }
 
-    $.post("/supportmailer", {message_attrs: {message: message, contactAddress: contactAddress, name: name}});
-    $(document).off('keydown');
-    this.remove();
+    $.ajax({
+      type: "POST",
+      url: "/supportmailer",
+      data: {message_attrs:
+                {message: message,
+                 contactAddress: contactAddress,
+                 name: name}
+            },
+      dataType: "text"
+    }).done(function(data, textStatus, jqXHR) {
+               var $contact = this.$el.find('.contact-content');
+               $contact.empty();
+               $contact.html(this.successTemplate());
+             }.bind(this));
   }
 });
