@@ -171,3 +171,48 @@ body {
     box-shadow: 0 2px 2px black;
   }
 }
+
+.m-background {
+  background: rgba(92, 88, 88, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.m-content {
+  z-index: 3;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 40%;
+  min-width: 300px;
+  background-color: white;
+  padding: 1pc;
+  border: 1px solid;
+  border-radius: 5px;
+  transform: translateX(-50%);
+
+  .contact-content {
+    max-width: 450px;
+  }
+
+  h1 {
+    text-align: center;
+    color: $primary-blue;
+  }
+  button.close {
+    color: #333;
+    opacity: 0.6;
+  }
+
+  .submit-button {
+    text-align: center;
+  }
+
+  .errors {
+    color: red;
+  }
+}
