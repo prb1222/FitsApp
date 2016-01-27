@@ -57,6 +57,8 @@ FitsApp.Views.ContactModal = Backbone.View.extend({
       return;
     }
 
+    this.$el.find(".form-container").html('<i class="fa fa-cog fa-spin fa-4x col-md-offset-5 col-xs-offset-5"></i>');
+
     $.ajax({
       type: "POST",
       url: "/supportmailer",
