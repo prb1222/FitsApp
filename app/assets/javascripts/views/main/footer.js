@@ -4,6 +4,7 @@ FitsApp.Views.Footer = Backbone.View.extend({
   className: "footer-container",
 
   initialize: function (options) {
+    var options = options || {};
     this.currentUser = options.currentUser;
   },
 

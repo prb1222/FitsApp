@@ -8,11 +8,6 @@ FitsApp.Routers.Router = Backbone.Router.extend({
     this.$rootEl.prepend(this.navBar.render().$el);
   },
 
-  addFooter: function () {
-    this.footer = this.footer || new FitsApp.Views.Footer({});
-    this.$rootEl.append(this.footer.render().$el);
-  },
-
   routes: {
     "": "root",
   },
@@ -28,6 +23,6 @@ FitsApp.Routers.Router = Backbone.Router.extend({
     this.$rootEl.html(view.$el);
     view.render();
     this.addNavbar();
-    this.addFooter();
+    // this.addFooter();
   }
 })
