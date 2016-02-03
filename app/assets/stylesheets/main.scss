@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $font-stack: "Lato", "Lucida Grande", "Lucida", "Verdana", "Arial", sans-serif;
-$primary-blue: #1e4387;
-$primary-grey: #777777;
+$primary-blue: rgb(46, 85, 150);
+$primary-grey: rgb(112,113,112);
 $light-grey: #cccccc;
 $light-white: #eeeeee;
 
@@ -21,14 +21,19 @@ nav.navbar-default {
   font-size: 30px;
   background-color: #ffffff;
   .navbar-link {
+    font-size: 20px;
     padding: 0px;
-    height: 42px;
     margin: 15px;
-    margin-top: 40px;
+    margin-top: 50px;
+    line-height: normal;
   }
 
   .navbar-text {
     margin-top: 40px;
+  }
+
+  li > a.sign-in, li > a.sign-out {
+    color: $primary-blue;
   }
 
 }
@@ -215,4 +220,12 @@ body {
   .errors {
     color: red;
   }
+}
+
+.footer-container {
+  background-color: white;
+}
+
+.hidden {
+  display: none;
 }

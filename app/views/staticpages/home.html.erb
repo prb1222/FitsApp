@@ -1,14 +1,16 @@
 <div id="content"></div>
 <script type="text/javascript">
   $(document).ready(function(){
-    // var username = "current_user.username";
-    // var user_id = "current_user.id";
-    // var user_location = "current_user.location"
-    // var currentUser = {
-    //   userId: user_id,
-    //   username: username,
-    // }
-    // FitsApp.initialize({currentUser: currentUser});
-    FitsApp.initialize();
+    var fname = "<%= @user.fname %>";
+    var lname = "<%= @user.lname %>";
+    var email = "<%= @user.email %>"
+    var session_token = "<%= @user.session_token if logged_in? %>"
+    var currentUser = {
+      fname: fname,
+      lname: lname,
+      email: email,
+      session_token: session_token
+    }
+    FitsApp.initialize(currentUser);
   });
 </script>

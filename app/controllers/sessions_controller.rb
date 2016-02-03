@@ -6,19 +6,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_credentials(params[:user][:username],
+    @user = User.find_by_credentials(params[:user][:email],
                                      params[:user][:password])
     if @user
       login_user!(@user)
-      redirect_to root_url
+      render json: @user
     else
-      flash[:errors] = ["Invalid login info!"]
-      redirect_to root_url
+      render json: ["Invalid login info!"], status: 422
     end
   end
 
   def destroy
     logout_user!
-    redirect_to new_user_url
+    render json: "success", status: 200
   end
 end

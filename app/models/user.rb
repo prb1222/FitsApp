@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  validates :fname, :lname, :email, :password, presence: true
+  validates :fname, :lname, :email, :password_digest, presence: true
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
   attr_reader :password

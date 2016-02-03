@@ -4,17 +4,38 @@ FitsApp.Routers.Router = Backbone.Router.extend({
   },
 
   addNavbar: function () {
-    this.navBar = this.navBar || new FitsApp.Views.NavBar({});
-    this.$rootEl.prepend(this.navBar.render().$el);
+    var navbar = new FitsApp.Views.NavBar({});
+    this.$rootEl.prepend(navbar.render().$el);
   },
 
   routes: {
     "": "root",
+    "login": "login",
+    "dashboard":"dashboard",
+    "logout":"root"
   },
 
   root: function () {
     var view = new FitsApp.Views.MainView();
     this.swapView(view)
+  },
+
+  login: function () {
+    if (FitsApp.SessionModel.get("session_token")) {
+      Backbone.history.navigate("dashboard", {trigger: true});
+      return;
+    }
+    var view = new FitsApp.Views.LoginView();
+    this.swapView(view);
+  },
+
+  dashboard: function () {
+    if (!FitsApp.SessionModel.get("session_token")) {
+      Backbone.history.navigate("login", {trigger: true});
+      return;
+    }
+    var view = new FitsApp.Views.Dashboard();
+    this.swapView(view);
   },
 
   swapView: function(view) {
@@ -23,6 +44,5 @@ FitsApp.Routers.Router = Backbone.Router.extend({
     this.$rootEl.html(view.$el);
     view.render();
     this.addNavbar();
-    // this.addFooter();
   }
 })

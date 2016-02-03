@@ -1,3 +1,25 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font-stack: "Lato", "Lucida Grande", "Lucida", "Verdana", "Arial", sans-serif;
+$primary-blue: rgb(46, 85, 150);
+$primary-grey: rgb(112,113,112);
+$light-grey: #cccccc;
+$light-white: #eeeeee;
+
+.login-view {
+  background-color: $light-white;
+  text-align: center;
+  h2 {
+    color: $primary-blue;
+  }
+
+  .errors {
+    color: red;
+  }
+
+  .login-form-container {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}

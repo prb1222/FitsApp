@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #use postgres for ActiveRecord
 gem 'pg'
+
+#use sqlite3 because aws is shitty
+# gem 'sqlite3'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails'
