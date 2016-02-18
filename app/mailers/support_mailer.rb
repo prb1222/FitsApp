@@ -4,4 +4,9 @@ class SupportMailer < ApplicationMailer
     @attrs = attributes
     mail(to: "support@forwarditsolution.com", subject: "Website Email")
   end
+
+  def ticket_email(attributes)
+    @attrs = attributes
+    mail(to: "support@forwarditsolution.com", subject: "Ticket Email")
+  end
 end
